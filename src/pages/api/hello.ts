@@ -5,9 +5,17 @@ type Data = {
   name: string
 }
 
+const fakeData = [
+  {id: 1, user: 'User1'},
+  {id: 2, user: 'User2'},
+  {id: 3, user: 'User3'},
+  {id: 4, user: 'User4'},
+  {id: 5, user: 'User5'},
+]
+
 export default function handler(
   req: NextApiRequest,
-  res: NextApiResponse<Data>
+  res: NextApiResponse<any>
 ) {
-  res.status(200).json({ name: 'John Doe' })
+  res.status(200).json(fakeData)
 }
